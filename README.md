@@ -1,2 +1,2 @@
 # rpg-character-system
-About A vehicle fleet program to learn more about inheritance.
+An RPG character system to learn more about inheritance.
