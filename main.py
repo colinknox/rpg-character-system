@@ -27,17 +27,22 @@ class Warrior(Character):
     def repair_armor(self, amount):
         self.__armor += amount
 
+class Mage(Character):
+    def __init__(self, name, health, mana):
+        super().__init__(name, health)
+        self.__mana = mana
 
-# yusuke = Character("Yusuke", 10_000)
-# print(f"Before health: {yusuke.health}")
-# yusuke.take_damage(9_999)
-# print(f"After health: {yusuke.health}")
+    def cast_spell(self, mana_cost):
+        if self.__mana >= mana_cost:
+            self.__mana -= mana_cost
+            return True
+        else:
+            return False
 
-conan = Warrior("Conan", 100, 25)
-# print(conan.name)
-# print(conan.health)
-# print(conan.strength)
-# print(conan.attack())
-print(conan.get_armor())
-print(conan.repair_armor(5))
-print(conan.get_armor())
+
+
+gandalf = Mage("Gandalf", 1000, 25)
+print(gandalf.name)
+print(gandalf.health)
+# print(gandalf.__mana)
+print(gandalf.cast_spell(26))
