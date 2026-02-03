@@ -38,11 +38,9 @@ class Mage(Character):
             return True
         else:
             return False
+        
+    def get_mana(self):
+        return self.__mana
 
-
-
-gandalf = Mage("Gandalf", 1000, 25)
-print(gandalf.name)
-print(gandalf.health)
-# print(gandalf.__mana)
-print(gandalf.cast_spell(26))
+    def meditate(self):
+        self.__mana += 20
